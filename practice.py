@@ -219,8 +219,6 @@ def join_strings(words):
         new_words += word
     return new_words
 
-    #(str(words).split([" "]))
-    #return new_string
 
 
 def average(numbers):
@@ -242,8 +240,8 @@ def average(numbers):
     (Think of the best way to handle an empty input list, though,
     a feel free to provide a good solution here.)
     """
-
-    return 0
+    average = sum(numbers)/float(len(numbers))
+    return average
 
 
 def join_strings_with_comma(words):
@@ -262,8 +260,15 @@ def join_strings_with_comma(words):
         >>> join_strings_with_comma(["Pretzel"])
         'Pretzel'
     """
-
-    return ""
+    for word in words:
+        if word == 1:
+            return word
+        
+    # new_words = ""
+    # for word in words:
+    #     new_words += word
+    #     new_words = new_words + ","
+    # return new_words
 
 
 def reverse_list(items):
@@ -289,7 +294,8 @@ def reverse_list(items):
         ['apple', 'berry', 'cherry']
     """
 
-    return []
+    new_items = items[::-1]
+    return new_items
 
 
 def reverse_list_in_place(items):
@@ -314,8 +320,8 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
+    pass
 
-    return []
 
 
 def duplicates(items):
@@ -344,7 +350,9 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    return []
+    dupes = [word for word in items if items[word] > 1]
+    print dupes
+
 
 
 def find_letter_indices(words, letter):
@@ -373,8 +381,11 @@ def find_letter_indices(words, letter):
     ("o" does not appear in "jumps", so the result for that input is
     `None`.)
     """
-
-    return []
+    if letter == []:
+        return None
+    for index, letter in enumerate(words):
+        return index()
+        
 
 #####################################################################
 # END OF PRACTICE: You can ignore everything below.
