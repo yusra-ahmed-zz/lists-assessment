@@ -393,6 +393,18 @@ def find_letter_indices(words, letter):
     `None`.)
     """
     my_indices = []
+    for word in words:
+        index = 0
+        for l in word:
+            if l == letter:
+                my_indices.append(index)
+                break
+            else:
+                index = index + 1
+                if index == len(word):
+                    my_indices.append(None)
+    return my_indices
+   
 
     
     
