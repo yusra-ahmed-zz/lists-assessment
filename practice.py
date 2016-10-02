@@ -132,8 +132,10 @@ def halvesies(numbers):
         >>> halvesies([1, 5])
         [0.5, 2.5]
     """
+    new_halves = []
     for number in numbers:
-        return number/2.0
+        new_halves.append(float(number)/2.0)
+    return new_halves
 
 
 def word_lengths(words):
