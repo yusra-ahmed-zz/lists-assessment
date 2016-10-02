@@ -66,13 +66,6 @@ def n_long_words(words, n):
             new_words.append(word)
     return new_words
 
-    
-    more_words = []
-    for word in words:
-        if len(word) > n:
-            more_words.append(word)
-    return more_words
-
 
 def smallest_int(numbers):
     """Find the smallest integer in a list of integers and return it.
@@ -93,7 +86,12 @@ def smallest_int(numbers):
         True
     """
 
-    return 100
+    
+    if numbers == []:
+        return None
+    new_number = sorted(numbers)
+    return new_number[0]
+
 
 
 def largest_int(numbers):
@@ -114,8 +112,10 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
-
-    return 0
+    if numbers == []:
+        return None
+    new_number = sorted(numbers)
+    return new_number[-1]
 
 
 def halvesies(numbers):
@@ -132,7 +132,6 @@ def halvesies(numbers):
         >>> halvesies([1, 5])
         [0.5, 2.5]
     """
-
     return []
 
 
