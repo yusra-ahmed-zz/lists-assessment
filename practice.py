@@ -213,7 +213,8 @@ def join_strings(words):
     """
     if words == []:
         return ""
-    new_string = 
+    new_string = str(words).strip("[]")
+    return new_string
 
 
 def average(numbers):
