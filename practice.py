@@ -269,15 +269,8 @@ def join_strings_with_comma(words):
         >>> join_strings_with_comma(["Pretzel"])
         'Pretzel'
     """
-    for word in words:
-        if word == 1:
-            return word
-        
-    # new_words = ""
-    # for word in words:
-    #     new_words += word
-    #     new_words = new_words + ","
-    # return new_words
+    new_list = ", ".join(words)
+    return new_list
 
 
 def reverse_list(items):
@@ -329,7 +322,19 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
-    pass
+
+    items[-1::-1]
+    return items
+    # if items == []:
+    #     return None
+    # index = 0
+    # new_list = len(items)-1
+    # while index<new_list:
+    #     items[index], items[new_list] = items[new_list], items[index]
+    #     index =+ 1
+    #     new_list -= 1
+    # return items
+
 
 
 
@@ -359,9 +364,14 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    dupes = [word for word in items if items[word] > 1]
-    print dupes
-
+    # for word in set(items):
+    #     items.remove(word)
+    # items = list(set(items))
+    # return items
+    set_one = set()
+    dupes = set(chars for chars in items if chars in set_one or set_one.add(chars))
+    
+    return sorted(dupes)
 
 
 def find_letter_indices(words, letter):
@@ -392,8 +402,13 @@ def find_letter_indices(words, letter):
     """
     if letter == []:
         return None
-    for index, letter in enumerate(words):
-        return index()
+    index = 0
+    if letter in words:
+        index =+ 1
+        return 
+
+    # for index, letter in enumerate(words):
+    #     return index()
         
 
 #####################################################################
