@@ -143,9 +143,8 @@ def word_lengths(words):
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
     """
-
-    return []
-
+    all_lengths = [len(word) for word in words if word.split()]
+    return all_lengths
 
 def sum_numbers(numbers):
     """Return the sum of all of the numbers in the list.
@@ -163,8 +162,14 @@ def sum_numbers(numbers):
         >>> sum_numbers([])
         0
     """
+    if numbers == []:
+        return 0
+    
+    summed_up = 0
+    for number in numbers:
+        summed_up = summed_up + number
+    return summed_up
 
-    return None
 
 
 def mult_numbers(numbers):
@@ -206,8 +211,9 @@ def join_strings(words):
         >>> join_strings([])
         ''
     """
-
-    return "Not the right thing"
+    if words == []:
+        return ""
+    new_string = 
 
 
 def average(numbers):
