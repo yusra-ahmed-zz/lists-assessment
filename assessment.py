@@ -77,11 +77,6 @@ def foods_in_common(foods1, foods2):
     """
     return [food for food in foods1 if food in foods2]
         
-
-    #common_foods = set(foods1 + foods2)
-    #for foods in common_foods:
-        #if foods != 0:
-            #return foods
         
 
 
