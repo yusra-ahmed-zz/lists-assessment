@@ -191,8 +191,14 @@ def mult_numbers(numbers):
         >>> mult_numbers([])
         1
     """
-
-    return None
+    if numbers == 0
+        return 0
+    if numbers == []
+        return 1
+    product = 1
+    for number in numbers:
+        product *= number
+    return product
 
 
 def join_strings(words):
