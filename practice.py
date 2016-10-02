@@ -191,9 +191,9 @@ def mult_numbers(numbers):
         >>> mult_numbers([])
         1
     """
-    if numbers == 0
+    if numbers == 0:
         return 0
-    if numbers == []
+    if numbers == []:
         return 1
     product = 1
     for number in numbers:
