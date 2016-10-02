@@ -323,19 +323,15 @@ def reverse_list_in_place(items):
         ['I', 'love', 'cookies']
     """
 
-    items[-1::-1]
-    return items
-    # if items == []:
-    #     return None
-    # index = 0
-    # new_list = len(items)-1
-    # while index<new_list:
-    #     items[index], items[new_list] = items[new_list], items[index]
-    #     index =+ 1
-    #     new_list -= 1
-    # return items
-
-
+    a = 0
+    z = len(items)-1
+    while a < z:
+        t = items[a]
+        items[a] = items[z]
+        items[z] = t
+        a=a+1
+        z=z-1
+    
 
 
 def duplicates(items):
@@ -364,10 +360,6 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    # for word in set(items):
-    #     items.remove(word)
-    # items = list(set(items))
-    # return items
     set_one = set()
     dupes = set(chars for chars in items if chars in set_one or set_one.add(chars))
     
@@ -400,16 +392,10 @@ def find_letter_indices(words, letter):
     ("o" does not appear in "jumps", so the result for that input is
     `None`.)
     """
-    if letter == []:
-        return None
-    index = 0
-    if letter in words:
-        index =+ 1
-        return 
+    my_indices = []
 
-    # for index, letter in enumerate(words):
-    #     return index()
-        
+    
+    
 
 #####################################################################
 # END OF PRACTICE: You can ignore everything below.
