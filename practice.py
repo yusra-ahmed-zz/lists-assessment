@@ -213,8 +213,14 @@ def join_strings(words):
     """
     if words == []:
         return ""
-    new_string = str(words).strip("[]")
-    return new_string
+    
+    new_words = ''
+    for word in words:
+        new_words += word
+    return new_words
+
+    #(str(words).split([" "]))
+    #return new_string
 
 
 def average(numbers):
